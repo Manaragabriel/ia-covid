@@ -1,0 +1,190 @@
+% Changes to WEKA Format: SRG - November 1994
+%	1. Boolean attributes changed from 1 and 0 to Enumerated attribute with
+%          values {true and false}
+%       2. Class Number (Attribute 18) changed to an Enumerated type with
+%	   values {1,2,3,4,5,6,7} 
+%
+% December 1997 - Changed class attribute values to semi-sensible names
+%
+% 1. Title: Covid-19
+% 
+% 2. Source Information
+%    -- Creator: Richard Forsyth
+%    -- Donor: Richard S. Forsyth 
+%              8 Grosvenor Avenue
+%              Mapperley Park
+%              Nottingham NG3 5DX
+%              0602-621676
+%    -- Date: 5/15/1990
+%  
+% 3. Past Usage:
+%    -- None known other than what is shown in Forsyth's PC/BEAGLE User's Guide.
+% 
+% 4. Relevant Information:
+%    -- A simple database containing 17 Boolean-valued attributes.  The "type"
+%       attribute appears to be the class attribute.  Here is a breakdown of
+%       which animals are in which type: (I find it unusual that there are
+%       2 instances of "frog" and one of "girl"!)
+% 
+%       Class# Set of animals:
+%       ====== ===============================================================
+%            1 (41) aardvark, antelope, bear, boar, buffalo, calf,
+%                   cavy, cheetah, deer, dolphin, elephant,
+%                   fruitbat, giraffe, girl, goat, gorilla, hamster,
+%                   hare, leopard, lion, lynx, mink, mole, mongoose,
+%                   opossum, oryx, platypus, polecat, pony,
+%                   porpoise, puma, pussycat, raccoon, reindeer,
+%                   seal, sealion, squirrel, vampire, vole, wallaby,wolf
+%            2 (20) chicken, crow, dove, duck, flamingo, gull, hawk,
+%                   kiwi, lark, ostrich, parakeet, penguin, pheasant,
+%                   rhea, skimmer, skua, sparrow, swan, vulture, wren
+%            3 (5)  pitviper, seasnake, slowworm, tortoise, tuatara 
+%            4 (13) bass, carp, catfish, chub, dogfish, haddock,
+%                   herring, pike, piranha, seahorse, sole, stingray, tuna
+%            5 (4)  frog, frog, newt, toad 
+%            6 (8)  flea, gnat, honeybee, housefly, ladybird, moth, termite, wasp
+%            7 (10) clam, crab, crayfish, lobster, octopus,
+%                   scorpion, seawasp, slug, starfish, worm
+% 
+% 5. Number of Instances: 101
+% 6. Number of Attributes: 18 (animal name, 15 Boolean attributes, 2 numerics)
+% 7. Attribute Information: (name of attribute and type of value domain)
+%    1. animal name:	Unique for each instance
+%    2. hair		Boolean
+%    3. feathers	Boolean
+%    4. eggs		Boolean
+%    5. milk		Boolean
+%    6. airborne	Boolean
+%    7. aquatic		Boolean
+%    8. predator	Boolean
+%    9. toothed		Boolean
+%   10. backbone	Boolean
+%   11. breathes	Boolean
+%   12. venomous	Boolean
+%   13. fins		Boolean
+%   14. legs		Numeric (set of values: {0,2,4,5,6,8})
+%   15. tail		Boolean
+%   16. domestic	Boolean
+%   17. catsize		Boolean
+%   18. type		Numeric (integer values in range [1,7])
+% 
+% 8. Missing Attribute Values: None
+% 9. Class Distribution: Given above
+   
+@RELATION zoo
+
+@ATTRIBUTE animal {paciente}
+
+@ATTRIBUTE febre {false, true}
+@ATTRIBUTE cansaco {false, true}
+@ATTRIBUTE tosse {false, true}
+@ATTRIBUTE falta_de_ar {false, true}
+
+@ATTRIBUTE cabeca {false, true}
+@ATTRIBUTE coriza {false, true}
+@ATTRIBUTE catarro {false, true}
+@ATTRIBUTE diarreia {false, true}
+@ATTRIBUTE dor_no_corpo {false, true}
+@ATTRIBUTE espirros {false, true}
+@ATTRIBUTE garganta {false, true}
+
+@ATTRIBUTE type { covid-19, gripe, resfriado }
+
+@DATA
+%
+% Instances (101):
+%
+paciente1,true,true,true,true,false,false,false,false,false,false,false,covid-19
+paciente2,true,true,true,true,true,false,false,false,false,false,false,covid-19
+paciente3,true,true,true,true,false,true,false,false,false,false,false,covid-19
+paciente4,true,true,true,true,false,false,true,false,false,false,false,covid-19
+paciente5,true,true,true,true,false,false,false,true,false,false,false,covid-19
+paciente6,true,true,true,true,false,false,false,false,true,false,false,covid-19
+paciente7,true,true,true,true,false,false,false,false,false,true,false,covid-19
+paciente8,true,true,true,true,false,false,false,false,false,false,true,covid-19
+paciente9,true,true,true,true,true,true,false,false,false,false,false,covid-19
+paciente10,true,true,true,true,false,true,true,false,false,false,false,covid-19
+paciente11,true,true,true,true,false,false,true,true,false,false,false,covid-19
+paciente12,true,true,true,true,false,false,false,true,true,false,false,covid-19
+paciente13,true,true,true,true,false,false,false,false,true,true,false,covid-19
+paciente14,true,true,true,true,false,false,false,false,false,true,true,covid-19
+paciente15,true,true,true,true,true,false,false,false,false,false,true,covid-19
+paciente16,true,true,true,true,true,true,true,false,false,false,false,covid-19
+paciente17,true,true,true,true,false,true,true,true,false,false,false,covid-19
+paciente18,true,true,true,true,false,false,true,true,true,false,false,covid-19
+paciente19,true,true,true,true,false,false,false,true,true,true,false,covid-19
+paciente20,true,true,true,true,false,false,false,false,true,true,true,covid-19
+paciente21,true,true,true,true,true,false,false,false,false,true,true,covid-19
+paciente22,true,true,true,true,true,true,false,false,false,false,true,covid-19
+paciente23,true,true,true,true,true,true,true,true,false,false,false,covid-19
+paciente24,true,true,true,true,false,true,true,true,true,false,false,covid-19
+paciente25,true,true,true,true,false,false,true,true,true,true,false,covid-19
+paciente26,true,true,true,true,false,false,false,true,true,true,true,covid-19
+paciente27,true,true,true,true,true,false,false,false,true,true,true,covid-19
+paciente28,true,true,true,true,true,true,false,false,false,true,true,covid-19
+paciente29,true,true,true,true,true,true,true,false,false,false,true,covid-19
+paciente30,true,true,true,true,true,true,true,true,true,false,false,covid-19
+paciente31,true,true,true,true,false,true,true,true,true,true,false,covid-19
+paciente32,true,true,true,true,false,false,true,true,true,true,true,covid-19
+paciente33,true,true,true,true,true,false,false,true,true,true,true,covid-19
+paciente34,true,true,true,true,true,true,false,false,true,true,true,covid-19
+paciente35,true,true,true,true,true,true,true,false,false,true,true,covid-19
+paciente36,true,true,true,true,true,true,true,true,false,false,true,covid-19
+paciente37,true,true,true,true,true,true,true,true,true,true,false,covid-19
+paciente38,true,true,true,true,false,true,true,true,true,true,true,covid-19
+paciente39,true,true,true,true,true,false,true,true,true,true,true,covid-19
+paciente40,true,true,true,true,true,true,false,true,true,true,true,covid-19
+paciente41,true,true,true,true,true,true,true,false,true,true,true,covid-19
+paciente42,true,true,true,true,true,true,true,true,false,true,true,covid-19
+paciente43,true,true,true,true,true,true,true,true,true,false,true,covid-19
+paciente44,true,true,true,true,true,false,false,false,false,false,true,covid-19
+paciente45,true,true,true,true,false,true,false,false,false,true,false,covid-19
+paciente46,false,true,true,true,true,true,true,true,true,true,true,gripe
+paciente47,true,false,true,true,true,true,true,true,true,true,true,gripe
+paciente48,true,true,false,true,true,true,true,true,true,true,true,gripe
+paciente49,true,true,true,false,true,true,true,true,true,true,true,gripe
+paciente50,false,false,true,true,true,true,true,true,true,true,true,gripe
+paciente51,true,false,false,true,true,true,true,true,true,true,true,gripe
+paciente52,true,true,false,false,true,true,true,true,true,true,true,gripe
+paciente53,false,true,true,false,true,true,true,true,true,true,true,gripe
+paciente54,false,false,false,true,true,true,true,true,true,true,true,gripe
+paciente55,true,false,false,false,true,true,true,true,true,true,true,gripe
+paciente56,false,true,false,false,true,true,true,true,true,true,true,gripe
+paciente57,false,false,true,false,true,true,true,true,true,true,true,gripe
+paciente58,false,false,false,false,false,true,true,true,true,true,true,gripe
+paciente59,false,false,false,false,true,false,true,true,true,true,true,gripe
+paciente60,false,false,false,false,true,true,false,true,true,true,true,gripe
+paciente61,false,false,false,false,true,true,true,false,true,true,true,gripe
+paciente62,false,false,false,false,true,true,true,true,false,true,true,gripe
+paciente63,false,false,false,false,true,true,true,true,true,false,true,gripe
+paciente64,false,false,false,false,true,true,true,true,true,true,false,gripe
+paciente65,false,false,false,false,false,false,true,true,true,true,true,gripe
+paciente66,false,false,false,false,true,false,false,true,true,true,true,gripe
+paciente67,false,false,false,false,true,true,false,false,true,true,true,gripe
+paciente68,false,false,false,false,true,true,true,false,false,true,true,gripe
+paciente69,false,false,false,false,true,true,true,true,false,false,true,gripe
+paciente70,false,false,false,false,true,true,true,true,true,false,false,gripe
+paciente71,false,false,false,false,false,true,true,true,true,true,false,gripe
+paciente72,false,false,false,false,false,false,false,true,true,true,true,gripe
+paciente73,false,false,false,false,true,false,false,false,true,true,true,gripe
+paciente74,false,false,false,false,true,true,false,false,false,true,true,gripe
+paciente75,false,false,false,false,true,true,true,false,false,false,true,gripe
+paciente76,false,false,false,false,true,true,true,true,false,false,false,gripe
+paciente77,false,false,false,false,false,true,true,true,true,false,false,gripe
+paciente78,false,false,false,false,false,false,true,true,true,true,false,gripe
+paciente79,false,false,false,false,false,false,false,false,true,true,true,gripe
+paciente80,false,false,false,false,true,false,false,false,false,true,true,gripe
+paciente81,false,false,false,false,true,true,false,false,false,false,true,gripe
+paciente82,false,false,false,false,true,true,true,false,false,false,false,gripe
+paciente83,false,false,false,false,false,true,true,true,false,false,false,gripe
+paciente84,false,false,false,false,false,false,true,true,true,false,false,gripe
+paciente85,false,false,false,false,false,false,false,true,true,true,false,gripe
+paciente86,false,false,false,false,false,false,false,false,false,true,true,gripe
+paciente87,false,false,false,false,true,false,false,false,false,false,true,gripe
+paciente88,false,false,false,false,true,true,false,false,false,false,false,gripe
+paciente89,false,false,false,false,false,true,true,false,false,false,false,gripe
+paciente90,false,false,false,false,false,false,true,true,false,false,false,gripe
+
+%
+%
+%
